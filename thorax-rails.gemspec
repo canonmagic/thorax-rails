@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.files = Dir["lib/**/*"] + Dir["vendor/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency('railties', '>= 3.1.0')
-  s.add_dependency('coffee-script', '~> 2.2.0')
+  s.add_dependency('coffee-script', '~> 2.4.1')
   s.add_dependency('jquery-rails')
   s.add_dependency('handlebars_assets', '~> 0.23.9')
 
