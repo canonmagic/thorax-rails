@@ -12,7 +12,7 @@
 
   // Save a reference to the global object (`window` in the browser, `exports`
   // on the server).
-  var root = this;
+  var root = this || window;
 
   // Save the previous value of the `Backbone` variable, so that it can be
   // restored later on, if `noConflict` is used.
