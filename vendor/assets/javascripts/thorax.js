@@ -45,7 +45,9 @@ if (!Handlebars.templates) {
   Handlebars.templates = {};
 }
 
-var Thorax = this.Thorax = {
+var root = this || window;
+
+var Thorax = root.Thorax = {
   templatePathPrefix: '',
   //view classes
   Views: {},
