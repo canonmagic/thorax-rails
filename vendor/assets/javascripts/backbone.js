@@ -5,7 +5,7 @@
 //     For all details and documentation:
 //     http://backbonejs.org
 
-(function(){
+(function(factory){
 
   // Initial Setup
   // -------------
@@ -717,14 +717,21 @@
     },
 
     // Return models with matching attributes. Useful for simple cases of `filter`.
-    where: function(attrs) {
-      if (_.isEmpty(attrs)) return [];
-      return this.filter(function(model) {
+    where: function(attrs, first) {
+
+      if (_.isEmpty(attrs)) return first ? undefined:[];
+      return this[first ? 'find':'filter'](function(model) {
         for (var key in attrs) {
           if (attrs[key] !== model.get(key)) return false;
         }
         return true;
       });
+    },
+
+    // Return the first model with matching attributes. Useful for simple cases
+    // of `find`.
+    findWhere: function(attrs) {
+      return this.where(attrs, true);
     },
 
     // Force the collection to re-sort itself. You don't need to call this under
