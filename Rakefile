@@ -28,23 +28,5 @@ end
 task :default => :test
 
 namespace :thorax do
-  desc "Download the latest releases of backbone, underscore, handlebars, and thorax"
-  task :download_latest do
-    files = {
-      'underscore.js' => 'http://underscorejs.org/underscore.js',
-      'backbone.js'  => 'http://backbonejs.org/backbone.js',
-      'handlebars.js' => 'https://raw.github.com/wycats/handlebars.js/master/lib/handlebars.js',
-      'thorax.js' => 'https://github.com/components/thorax/blob/master/thorax.js'
-    }
-    vendor_dir = "vendor/assets/javascripts"
-
-    require 'open-uri'
-    files.each do |local, remote|
-      puts "Downloading #{local} from #{remote}"
-      File.open "#{vendor_dir}/#{local}", 'w' do |f|
-        f.write open(remote).read
-      end
-    end
-  end
 end
 
