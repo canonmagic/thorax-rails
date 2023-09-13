@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version = "0.1.6"
   s.authors = ["Lauren Eastridge", "Formidable Labs", "Walmart Labs"]
   s.email = ["lauren.eastridge@formidablelabs.com"]
-  s.homepage = "http://github.com/walmartlabs/thorax-gem"
+  s.homepage = "https://github.com/canonmagic/thorax-rails"
 
   s.summary = "Use thorax.js with rails"
   s.description = "Add Thorax to the Rails asset pipeline.  Generators take care of boilerplate code so you don't have to"
